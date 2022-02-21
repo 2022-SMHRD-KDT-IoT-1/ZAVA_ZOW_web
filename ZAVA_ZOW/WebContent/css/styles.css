@@ -81,7 +81,7 @@ h1 {
 }
 
 h2 {
-	color: #393939;
+	color:  #00bfd8;
 	font: 700 2.25rem/2.75rem "Raleway", sans-serif;
 }
 
@@ -96,7 +96,7 @@ h4 {
 }
 
 h5 {
-	color: #393939;
+	color: #00bfd8;
 	font: 700 1.125rem/1.625rem "Raleway", sans-serif;
 }
 
@@ -116,7 +116,7 @@ a:hover {
 }
 
 a.turquoise {
-	color: #00bfd8;
+	color: #00bfd8;     
 }
 
 a.white {
@@ -640,8 +640,8 @@ input[type='checkbox'] {
 }
 
 .navbar-custom .navbar-brand.logo-image img {
-    width: 7.4375rem;
-	height: 2rem;
+    width: 9.4375rem;
+	height: 3rem;
 }
 
 .navbar-custom .navbar-brand.logo-text {
