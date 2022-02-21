@@ -15,6 +15,6 @@
     </environment>
   </environments>
   <mappers>
-    <mapper resource="org/zavazow/mapper/mapper.xml"/>
+    <mapper resource="org/zavazow/mapper/PassengerMapper.xml"/>
   </mappers>
 </configuration>
