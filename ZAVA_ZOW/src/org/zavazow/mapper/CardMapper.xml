@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zavazow.model.CardDAO">
+
+	<select id="selectCard" parameterType="org.zavazow.model.CardVO" resultType="org.zavazow.model.CardVO">
+  		select * from tbl_card where cardnum=#{cardnum}
+  	</select>
+  	
+  	<update id="updateCard" parameterType="org.zavazow.model.CardVO">
+  		update tbl_card set status='0' where cardnum=#{cardnum}
+  	</update>
+  	  	
+</mapper>
