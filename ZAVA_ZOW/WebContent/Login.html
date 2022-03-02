@@ -339,7 +339,7 @@ select {
 		<!-- content-->
 		<div id="content">
 
-			<form action="#">
+			<form action="loginCon">
 			
 				<!-- ID -->
 				<div>
@@ -347,7 +347,7 @@ select {
 						<label for="id">아이디</label>
 					</h3>
 					<span class="box int_id">
-						<input type="text" id="id" class="int" maxlength="20">
+						<input type="text" id="id" name="id" class="int" maxlength="20">
 						<span class="step_url">zavazow.com</span>
 					</span>
 					<span class="error_next_box"></span>
@@ -359,7 +359,7 @@ select {
 						<label for="pswd1">비밀번호</label>
 					</h3>
 					<span class="box int_pass">
-						<input type="text" id="pswd1" class="int" maxlength="20">
+						<input type="text" id="pswd1" name="pw" class="int" maxlength="20">
 						<span id="alertTxt">사용불가</span>
 					</span>
 					<span class="error_next_box"></span>
@@ -367,7 +367,7 @@ select {
 
 				<!-- JOIN BTN-->
 				<div class="btn_area">
-					<button type="button" id="btnJoin" style="background-color: #3c96fa">
+					<button type="submit" id="btnJoin" style="background-color: #3c96fa">
 						<span>로그인</span>
 					</button>
 				</div>
