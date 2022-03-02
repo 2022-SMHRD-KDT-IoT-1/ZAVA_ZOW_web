@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zavazow.model.PassengerVO">
+	
+	<!-- 승객 회원가입 -->
+	<insert id="joinCon" parameterType="org.zavazow.model.PassengerVO">
+		insert into join_psg values (#{id}, #{pw}, #{name}, #{nick}, #{birth_yy}, #{birth_mm}, #{birth_dd}, #{gender},  #{cardNum}, #{tel},  #{handi})
+	</insert>
+	
+	<!-- 승객 로그인 -->
+	 <select id="loginCon" parameterType="org.zavazow.model.PassengerVO" resultType="org.zavazow.model.PassengerVO">
+	 	select * from join_psg where id = #{id} and pw = #{pw}
+	 </select>
+  	
+  	
+  	
+  		<!-- 기사 회원가입 -->
+	<insert id="joinDCon" parameterType="org.zavazow.model.DriverVO">
+		insert into join_driver values (#{d_id}, #{d_pw}, #{d_name}, #{d_nick}, #{dbirth_yy}, #{dbirth_mm}, #{dbirth_dd}, #{d_gender},  #{d_company}, #{d_tel},  #{d_joindate})
+	</insert>
+ 		
+ <!-- 
+	 <select id="#" parameterType="org.zavazow.model.DriverVO" resultType="org.zavazow.model.DriverVO">
+	 	select * from join_driver where id = #{d_id} and pw = #{d_pw}
+	 </select> 
+ 승객 로그인 -->
+	 
+	   		<!-- 관리자 회원가입 -->
+	<insert id="joinACon" parameterType="org.zavazow.model.AdminVO">
+		insert into join_admin values (#{a_id}, #{a_pw}, #{a_code})
+	</insert>
+	 
+  	
+</mapper>
