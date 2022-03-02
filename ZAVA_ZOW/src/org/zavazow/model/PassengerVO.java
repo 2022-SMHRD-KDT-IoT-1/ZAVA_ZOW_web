@@ -1,80 +1,136 @@
 package org.zavazow.model;
 
 public class PassengerVO {
-
-	private String p_id;
-	private String p_pw;
-	private String p_name;
-	private String p_nick;
-	private String p_cardnum;
-	private String p_joindate;
-	private String p_handicapped;
 	
 	
-	public PassengerVO(String p_id, String p_pw, String p_name, String p_nick, String p_cardnum, String p_handicapped) {
-		this.p_id = p_id;
-		this.p_pw = p_pw;
-		this.p_name = p_name;
-		this.p_nick = p_nick;
-		this.p_cardnum = p_cardnum;
-		this.p_handicapped = p_handicapped;
+	
+	private String id;
+	private String pw;
+	private String name;
+	private String nick;
+	private String birth_yy;
+	private String birth_mm;
+	private String birth_dd;
+	private String gender;
+	private String cardNum;
+	private String tel;
+	private String handi;
+	
+	public PassengerVO(String id, String pw, String name, String nick, String birth_yy, String birth_mm,
+			String birth_dd, String gender, String cardNum, String tel, String handi) {
+		
+		this.id = id;
+		this.pw = pw;
+		this.name = name;
+		this.nick = nick;
+		this.birth_yy = birth_yy;
+		this.birth_mm = birth_mm;
+		this.birth_dd = birth_dd;
+		this.gender = gender;
+		this.cardNum = cardNum;
+		this.tel = tel;
+		this.handi = handi;
 	}
 
-	public String getP_id() {
-		return p_id;
+	public PassengerVO(String id, String pw) {
+		
+		this.id =id;
+		this.pw =pw;
 	}
 
-	public void setP_id(String p_id) {
-		this.p_id = p_id;
+	public String getId() {
+		return id;
 	}
 
-	public String getP_pw() {
-		return p_pw;
+	public void setId(String id) {
+		this.id = id;
 	}
 
-	public void setP_pw(String p_pw) {
-		this.p_pw = p_pw;
+	public String getPw() {
+		return pw;
 	}
 
-	public String getP_name() {
-		return p_name;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
 
-	public void setP_name(String p_name) {
-		this.p_name = p_name;
+	public String getName() {
+		return name;
 	}
 
-	public String getP_nick() {
-		return p_nick;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setP_nick(String p_nick) {
-		this.p_nick = p_nick;
+	public String getNick() {
+		return nick;
 	}
 
-	public String getP_cardnum() {
-		return p_cardnum;
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 
-	public void setP_cardnum(String p_cardnum) {
-		this.p_cardnum = p_cardnum;
+	public String getBirth_yy() {
+		return birth_yy;
 	}
 
-	public String getP_joindate() {
-		return p_joindate;
+	public void setBirth_yy(String birth_yy) {
+		this.birth_yy = birth_yy;
 	}
 
-	public void setP_joindate(String p_joindate) {
-		this.p_joindate = p_joindate;
+	public String getBirth_mm() {
+		return birth_mm;
 	}
 
-	public String getP_handicapped() {
-		return p_handicapped;
+	public void setBirth_mm(String birth_mm) {
+		this.birth_mm = birth_mm;
 	}
 
-	public void setP_handicapped(String p_handicapped) {
-		this.p_handicapped = p_handicapped;
+	public String getBirth_dd() {
+		return birth_dd;
 	}
+
+	public void setBirth_dd(String birth_dd) {
+		this.birth_dd = birth_dd;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getCardNum() {
+		return cardNum;
+	}
+
+	public void setCardNum(String cardNum) {
+		this.cardNum = cardNum;
+	}
+
+	public String getTel() {
+		return tel;
+	}
+
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+
+	public String getHandi() {
+		return handi;
+	}
+
+	public void setHandi(String handi) {
+		this.handi = handi;
+	}
+
+
+	
+	
+	
+	
 	
 	
 }
