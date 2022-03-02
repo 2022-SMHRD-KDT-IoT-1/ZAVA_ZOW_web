@@ -31,7 +31,6 @@ public class PassengerDAO {
 
 		int cnt = session.insert("joinCon", vo);
 
-		
 		session.close();
 
 		return cnt;
@@ -49,6 +48,19 @@ public class PassengerDAO {
 		session.close();
 
 		return uvo;
+	}
+	
+	//===================================
+	// UPDATE
+	public int update(PassengerVO vo) {
+		
+		SqlSession session = sqlSessionFactory.openSession(true);
+
+		int cnt = session.update("updateCon", vo);
+		
+		session.close();
+
+		return cnt;
 	}
 
 	// =========================³¡

@@ -36,7 +36,7 @@ public class loginCon extends HttpServlet {
 			
 		}
 		
-		response.sendRedirect("goMain");
+		response.sendRedirect("Main.jsp");
 		
 	}
 
