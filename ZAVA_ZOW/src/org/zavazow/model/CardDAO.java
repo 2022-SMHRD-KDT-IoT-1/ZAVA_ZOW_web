@@ -27,7 +27,7 @@ public class CardDAO {
 	
 	public CardVO selectCard(String cardnum) {
 		SqlSession session = sqlSessionFactory.openSession();
-
+		
 		CardVO vo = session.selectOne("selectCard", cardnum);
 		
 		session.close();
