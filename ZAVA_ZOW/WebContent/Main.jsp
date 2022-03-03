@@ -1,3 +1,4 @@
+<%@page import="org.zavazow.model.AdminVO"%>
 <%@page import="org.zavazow.model.DriverVO"%>
 <%@page import="org.zavazow.model.PassengerVO"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
@@ -38,7 +39,13 @@
 	out.print(vo);
 	System.out.println(vo);
 	
+	DriverVO dvo = (DriverVO)session.getAttribute("dvo");
+	out.print(dvo);
+	System.out.println(dvo);
 
+	AdminVO avo = (AdminVO)session.getAttribute("avo");
+	out.print(avo);
+	System.out.print(avo);
 	%>
 	<!-- Preloader -->
 	<div class="spinner-wrapper">
@@ -102,7 +109,7 @@
 
 				<!-- Dropdown Menu -->
 				<li class="nav-item dropdown">
-				<%if(vo == null){ %>
+				<%if(vo == null && dvo == null && avo == null){ %>
 				<a class="nav-link dropdown-toggle page-scroll" href="Login.html"
 					id="navbarDropdown" role="button" aria-haspopup="true"
 					aria-expanded="false">로그인</a>
@@ -112,20 +119,30 @@
 					aria-expanded="false">로그아웃</a>
 					<%} %>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<%if(vo == null){ %>
+					<%if(vo == null && dvo == null && avo == null){ %>
 						<a class="dropdown-item" href="Join_choice.html"><span
 							class="item-text">회원가입</span></a>
 						<div class="dropdown-items-divide-hr"></div>
 						<a class="dropdown-item" href="Login.html"><span
 							class="item-text">로그인</span></a>
 							<%}else{ %>
-							<a class="dropdown-item" href="Join_update.jsp"><span
-							class="item-text">개인정보수정</span></a>
+								<%if(vo != null){ %>
+							<a class="dropdown-item" href="Join_update.jsp">
+							<span class="item-text">개인정보수정</span></a>
+							<%}else if(dvo != null){ %>
+							<a class="dropdown-item" href="JoinD_update.jsp">
+							<span class="item-text">개인정보수정</span></a>
+							<%}else if(avo != null){ %>
+							<a class="dropdown-item" href="JoinA_update.jsp">
+							<span class="item-text">개인정보수정</span></a>
+							<%}else{ %>
+							<%} %>
 						<div class="dropdown-items-divide-hr"></div>
 						<a class="dropdown-item" href="logoutCon"><span
 							class="item-text">로그아웃</span></a>
 							<%} %>
 					</div></li>
+					
 					
 				<!-- end of dropdown menu -->
 

@@ -12,6 +12,10 @@ public class AdminVO {
 		this.a_pw = a_pw;
 		this.a_code = a_code;
 	}
+	public AdminVO(String a_id, String a_pw) {
+		this.a_id = a_id;
+		this.a_pw = a_pw;
+	}
 	public String getA_id() {
 		return a_id;
 	}

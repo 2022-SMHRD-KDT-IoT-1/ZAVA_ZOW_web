@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -338,13 +340,13 @@ select {
 
 	<div id="wrapper">
 		<div align="center">
-			<a href="loginD.jsp">버스기사 로그인</a> <a href="loginA.jsp">관리자 로그인</a>
+			<a href="login.html">일반 로그인</a> <a href="#">버스기사 로그인</a>
 		</div>
 
 		<!-- content-->
 		<div id="content">
 
-			<form action="loginDCon">
+			<form action="loginACon">
 
 				<!-- ID -->
 				<div>
@@ -352,7 +354,7 @@ select {
 						<label for="id">아이디</label>
 					</h3>
 					<span class="box int_id"> <input type="text" id="id"
-						name="id" class="int" maxlength="20"> <span
+						name="a_id" class="int" maxlength="20"> <span
 						class="step_url">zavazow.com</span>
 					</span> <span class="error_next_box"></span>
 				</div>
@@ -363,7 +365,8 @@ select {
 						<label for="pswd1">비밀번호</label>
 					</h3>
 					<span class="box int_pass"> <input type="text" id="pswd1"
-						name="pw" class="int" maxlength="20"> <span id="alertTxt">사용불가</span>
+						name="a_pw" class="int" maxlength="20"> <span
+						id="alertTxt">사용불가</span>
 					</span> <span class="error_next_box"></span>
 				</div>
 

@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class DriverDAO {
-	
+
 	private static SqlSessionFactory sqlSessionFactory;
 
 	static {
@@ -22,6 +22,7 @@ public class DriverDAO {
 			e.printStackTrace();
 		}
 	}
+
 	// =========================================================
 	// JOIN
 	public int join(DriverVO dvo) {
@@ -30,7 +31,6 @@ public class DriverDAO {
 
 		int cnt = session.insert("joinDCon", dvo);
 
-		
 		session.close();
 
 		return cnt;
@@ -48,6 +48,30 @@ public class DriverDAO {
 		session.close();
 
 		return uvo;
+	}
+
+	// ===================================
+	// UPDATE
+	public int update(DriverVO dvo) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+
+		int cnt = session.update("updateDCon", dvo);
+
+		session.close();
+
+		return cnt;
+	}
+	// ===============================
+	// DELETE
+
+	public int delete(String d_id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+
+		int cnt = session.delete("deleteDCon", d_id);
+
+		session.close();
+
+		return cnt;
 	}
 
 	// =========================³¡

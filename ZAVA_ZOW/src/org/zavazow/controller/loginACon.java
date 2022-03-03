@@ -8,20 +8,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.zavazow.model.AdminDAO;
+import org.zavazow.model.AdminVO;
 
-@WebServlet("/logoutCon")
-public class logoutCon extends HttpServlet {
+
+@WebServlet("/loginACon")
+public class loginACon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		HttpSession session = request.getSession();
+		String a_id = request.getParameter("a_id");
+		String a_pw = request.getParameter("a_pw");
 		
-		session.removeAttribute("vo");
-		session.removeAttribute("dvo");
-		session.removeAttribute("avo");
+		AdminVO avo = new AdminVO(a_id, a_pw);
+		
+		AdminDAO dao = new AdminDAO();
+		AdminVO uvo = dao.login(avo);
+		
+		if(uvo != null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("avo", uvo);
+		}else {
+			
+		}
 		
 		response.sendRedirect("Main.jsp");
+		
+		
 	}
 
 }

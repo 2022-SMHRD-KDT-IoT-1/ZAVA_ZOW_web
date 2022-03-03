@@ -46,11 +46,34 @@ public class AdminDAO {
 
 		SqlSession session = sqlSessionFactory.openSession();
 
-		AdminVO uvo = session.selectOne("loginCon", avo);
+		AdminVO uvo = session.selectOne("loginACon", avo);
 
 		session.close();
 
 		return uvo;
+	}
+	//===================================
+	// UPDATE
+	public int update(AdminVO avo) {
+		
+		SqlSession session = sqlSessionFactory.openSession(true);
+
+		int cnt = session.update("updateACon", avo);
+		
+		session.close();
+
+		return cnt;
+	}
+	// ===============================
+	// DELETE
+	public int delete(String a_id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+
+		int cnt = session.delete("deleteACon", a_id);
+
+		session.close();
+
+		return cnt;
 	}
 
 	// =========================³¡

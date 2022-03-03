@@ -8,20 +8,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.zavazow.model.DriverDAO;
+import org.zavazow.model.DriverVO;
 
-@WebServlet("/logoutCon")
-public class logoutCon extends HttpServlet {
+
+@WebServlet("/deleteDCon")
+public class deleteDCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		
 		HttpSession session = request.getSession();
+		DriverVO dvo = (DriverVO)session.getAttribute("dvo");
 		
-		session.removeAttribute("vo");
-		session.removeAttribute("dvo");
-		session.removeAttribute("avo");
+		DriverDAO dao = new DriverDAO();
+		int cnt = dao.delete(dvo.getD_id());
 		
-		response.sendRedirect("Main.jsp");
+		if(cnt > 0) {
+			session.removeAttribute("dvo");
+			response.sendRedirect("Main.jsp");
+		}else {
+			response.sendRedirect("JoinD_update.jsp");
+		}
 	}
 
 }
