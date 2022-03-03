@@ -62,6 +62,17 @@ public class PassengerDAO {
 
 		return cnt;
 	}
+	//===============================
+	// DELETE
+	public int delete(String id) {
+		SqlSession session = sqlSessionFactory.openSession(true);
+		
+		int cnt = session.delete("deleteCon", id); 
+		
+		session.close();
+		
+		return cnt;
+	}
 
 	// =========================³¡
 }

@@ -5,44 +5,68 @@
 <mapper namespace="org.zavazow.model.PassengerVO">
 
 	<!-- 승객 회원가입 -->
-	<insert id="joinCon"
-		parameterType="org.zavazow.model.PassengerVO">
-		insert into join_psg values (#{id}, #{pw}, #{name},
-		#{nick}, #{birth_yy}, #{birth_mm}, #{birth_dd}, #{gender}, #{cardNum},
-		#{tel}, #{handi})
+	<insert id="joinCon" parameterType="org.zavazow.model.PassengerVO">
+		insert into join_psg values (#{id}, #{pw}, #{name},#{nick}, #{birth_yy}, #{birth_mm}, #{birth_dd}, #{gender}, #{cardNum},#{tel}, #{handi})
 	</insert>
 
 	<!-- 승객 로그인 -->
-	<select id="loginCon"
-		parameterType="org.zavazow.model.PassengerVO"
-		resultType="org.zavazow.model.PassengerVO">
+	<select id="loginCon" parameterType="org.zavazow.model.PassengerVO" resultType="org.zavazow.model.PassengerVO">
 		select * from join_psg where id = #{id} and pw = #{pw}
 	</select>
-	<!--승객 업데이트 -->
+	<!--개인정보변경 -->
 	<update id="updateCon" parameterType="org.zavazow.model.PassengerVO">
-		update join_psg set pw = #{pw},name = #{name},nick = #{nick}, birth_yy = #{birth_yy}, birth_mm = #{birth_mm}, birth_dd = #{birth_dd}, gender = #{gender}, cardNum = #{cardNum}, tel = #{tel}, handi = #{handi}
+		update join_psg set pw = #{pw},name = #{name},nick =#{nick}, birth_yy = #{birth_yy}, birth_mm = #{birth_mm}, birth_dd =#{birth_dd}, gender = #{gender}, cardNum = #{cardNum}, tel = #{tel},handi = #{handi}
 		where id = #{id}
-
 	</update>
-
-
-	<!-- 기사 회원가입 -->
+	<!-- 회원탈퇴 -->
+	<delete id="deleteCon">
+		delete from join_psg
+		where id = #{id}
+	</delete>
+	
+		<!-- 기사 회원가입 -->
 	<insert id="joinDCon" parameterType="org.zavazow.model.DriverVO">
-		insert into join_driver
-		values (#{d_id}, #{d_pw}, #{d_name}, #{d_nick}, #{dbirth_yy},
-		#{dbirth_mm}, #{dbirth_dd}, #{d_gender}, #{d_company}, #{d_tel},
-		#{d_joindate})
+		insert into join_driver values(#{d_id}, #{d_pw}, #{d_name}, #{d_nick}, #{dbirth_yy},#{dbirth_mm}, #{dbirth_dd}, #{d_gender}, #{d_company}, #{d_tel},#{d_joindate})
 	</insert>
+	
+	<!-- 기사 로그인 -->
+	<select id="loginDCon" parameterType="org.zavazow.model.DriverVO" resultType="org.zavazow.model.DriverVO">
+		select * from join_driver where d_id = #{d_id} and d_pw = #{d_pw} 
+	</select>
+	
+	<!-- 기사 개인정보수정 -->
+	<update id="updateDCon" parameterType="org.zavazow.model.DriverVO">
+		update join_driver set d_pw = #{d_pw}, d_name = #{d_name}, d_nick =#{d_nick}, dbirth_yy = #{dbirth_yy}, dbirth_mm = #{dbirth_mm}, dbirth_dd =#{dbirth_dd}, d_gender = #{d_gender}, d_company = #{d_company}, d_tel = #{d_tel}, d_joindate = #{d_joindate}
+		where d_id = #{d_id}
+	</update>
+	
+	<!-- 회원탈퇴 -->
+		<delete id="deleteDCon">
+		delete from join_driver
+		where d_id = #{d_id}
+	</delete>
 
-	<!-- <select id="#" parameterType="org.zavazow.model.DriverVO" resultType="org.zavazow.model.DriverVO"> 
-		select * from join_driver where id = #{d_id} and pw = #{d_pw} </select> 승객 
-		로그인 -->
 
 	<!-- 관리자 회원가입 -->
 	<insert id="joinACon" parameterType="org.zavazow.model.AdminVO">
-		insert into join_admin
-		values (#{a_id}, #{a_pw}, #{a_code})
+		insert into join_admin values (#{a_id}, #{a_pw}, #{a_code})
 	</insert>
 
+	<!-- 관리자 로그인  -->	
+	<select id="loginACon" parameterType="org.zavazow.model.AdminVO" resultType="org.zavazow.model.AdminVO">
+		select * from join_admin where a_id = #{a_id} and a_pw = #{a_pw} 
+	</select>
+	
+	<!-- 관리자 개인정보수정  -->	
+	<update id="updateACon" parameterType="org.zavazow.model.AdminVO">
+		update join_admin set a_pw = #{a_pw},  a_code = #{a_code}
+		where a_id = #{a_id}
+	</update>
+	
+	<!-- 회원탈퇴 -->
+	<delete id="deleteACon">
+		delete from join_admin
+		where a_id = #{a_id}
+	</delete>
 
 </mapper>
