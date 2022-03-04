@@ -222,7 +222,7 @@ select {
 		<!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Evolo</a> -->
 
 		<!-- Image Logo -->
-		<a class="navbar-brand logo-image" href="index.html"><img
+		<a class="navbar-brand logo-image" href="Main.jsp"><img
 			src="./images/JAVA_ZOW_Logo.PNG" id="logo" alt="alternative"></a>
 
 
@@ -340,7 +340,7 @@ select {
 
 	<div id="wrapper">
 		<div align="center">
-			<a href="login.html">일반 로그인</a> <a href="#">버스기사 로그인</a>
+			<a href="login.html">일반 로그인</a> <a href="loginD.jsp">버스기사 로그인</a>
 		</div>
 
 		<!-- content-->
@@ -386,34 +386,6 @@ select {
 
 	</div>
 	<!-- wrapper -->
-
-
-
-
-
-	<!-- Breadcrumbs -->
-	<div class="ex-basic-1">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="breadcrumbs">
-						<a href="index.html">Home</a><i class="fa fa-angle-double-right"></i><span>로그인</span>
-					</div>
-					<!-- end of breadcrumbs -->
-				</div>
-				<!-- end of col -->
-			</div>
-			<!-- end of row -->
-		</div>
-		<!-- end of container -->
-	</div>
-	<!-- end of ex-basic-1 -->
-	<!-- end of breadcrumbs -->
-
-
-
-
-
 
 
 	<!-- Copyright -->

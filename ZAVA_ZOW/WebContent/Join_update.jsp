@@ -19,7 +19,7 @@
 
 
 	<div id="header">
-		<a href="index.html" target="_self" title="메인페이지로 이동"><img
+		<a href="Main.jsp" target="_self" title="메인페이지로 이동"><img
 			src="./images/JAVA_ZOW_Logo.PNG" id="logo"></a>
 	</div>
 
