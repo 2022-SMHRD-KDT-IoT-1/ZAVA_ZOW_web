@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zavazow.model.ButtonDAO">
+
+	<select id="selectButton" parameterType="org.zavazow.model.ButtonVO" resultType="org.zavazow.model.ButtonVO">
+  		select * from tbl_button where buttonnum=#{buttonnum}
+  	</select>
+  	
+  	<update id="updateButton" parameterType="org.zavazow.model.ButtonVO">
+  		update tbl_button set status='0' where buttonnum=#{buttonnum}
+  	</update>
+  	  	
+</mapper>

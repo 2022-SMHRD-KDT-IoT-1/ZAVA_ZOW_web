@@ -340,7 +340,7 @@ select {
 
 	<div id="wrapper">
 		<div align="center">
-			<a href="login.html">일반 로그인</a> <a href="loginA.jsp">관리자 로그인</a>
+			<a class="btn-outline-reg back" href="login.html">일반 로그인</a> <a class="btn-outline-reg back" href="loginA.jsp">관리자 로그인</a>
 		</div>
 
 		<!-- content-->

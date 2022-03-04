@@ -18,5 +18,6 @@
     <mapper resource="org/zavazow/mapper/BoardMapper.xml"/>
     <mapper resource="org/zavazow/mapper/joinMapper.xml"/>
     <mapper resource="org/zavazow/mapper/CardMapper.xml"/>
+    <mapper resource="org/zavazow/mapper/ButtonMapper.xml"/>
   </mappers>
 </configuration>
