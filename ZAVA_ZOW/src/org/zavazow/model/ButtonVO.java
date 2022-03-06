@@ -2,42 +2,35 @@ package org.zavazow.model;
 
 public class ButtonVO {
 
-	private String Buttonnum;
-	private String status;
+	private String bus_stop;
+	private String buttonnum;
 	
 	
-	
-	public ButtonVO(String buttonnum, String status) {
+	public ButtonVO(String bus_stop, String buttonnum) {
 		super();
-		Buttonnum = buttonnum;
-		this.status = status;
+		this.bus_stop = bus_stop;
+		this.buttonnum = buttonnum;
 	}
 
+
+	public String getBus_stop() {
+		return bus_stop;
+	}
+
+
+	public void setBus_stop(String bus_stop) {
+		this.bus_stop = bus_stop;
+	}
 
 
 	public String getButtonnum() {
-		return Buttonnum;
+		return buttonnum;
 	}
-
 
 
 	public void setButtonnum(String buttonnum) {
-		Buttonnum = buttonnum;
+		this.buttonnum = buttonnum;
 	}
-
-
-
-	public String getStatus() {
-		return status;
-	}
-
-
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	
-	
 	
 	
 }

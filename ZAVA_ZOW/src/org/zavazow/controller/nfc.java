@@ -18,7 +18,7 @@ public class nfc extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String cardnum = request.getParameter("cardnum"); // nfc : 아두이노에서 받은 카드값
+		String cardnum = request.getParameter("cardnum"); // 아두이노에서 받은 카드값
 
 		CardDAO dao = new CardDAO();
 		CardVO vo = dao.selectCard(cardnum);
