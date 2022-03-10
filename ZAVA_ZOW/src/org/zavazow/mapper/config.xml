@@ -19,5 +19,7 @@
     <mapper resource="org/zavazow/mapper/joinMapper.xml"/>
     <mapper resource="org/zavazow/mapper/CardMapper.xml"/>
     <mapper resource="org/zavazow/mapper/ButtonMapper.xml"/>
+    <mapper resource="org/zavazow/mapper/BusStopMapper.xml"/>
+    <mapper resource="org/zavazow/mapper/ReservationMapper.xml"/>
   </mappers>
 </configuration>

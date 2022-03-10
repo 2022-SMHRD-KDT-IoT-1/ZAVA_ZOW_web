@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zavazow.model.ReservationDAO">
+
+	<select id="selectReservation" resultType="org.zavazow.model.ReservationVO">
+  		select * from tbl_reservation
+  	</select>
+  	
+  	<insert id="createReservation" parameterType="org.zavazow.model.ReservationVO">
+  		insert into tbl_reservation values (tbl_reservation_seq.nextval ,#{busStopId}, #{lineId}, #{busId}, #{reservationYN})
+  	</insert>
+  	
+</mapper>
