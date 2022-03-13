@@ -48,7 +48,7 @@ Smart Bus Information System with Arduino &amp; Web
 ![15](https://user-images.githubusercontent.com/99253941/158060519-86c68255-f87b-4db2-918e-5570ed0fe637.jpg)
 
 - 골목형 BIS
-![16](https://user-images.githubusercontent.com/99253941/158060527-be3c7f05-e506-478b-adb3-bf31aab7fbee.jpg)
+![16](https://user-images.githubusercontent.com/99253941/158066447-9da43790-861d-40a3-abe2-7c72ccf3a164.jpg)
 
 ## 회로도
 - 도심형 BIS 화면(2.2인치 TFT LCD)
