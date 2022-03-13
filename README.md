@@ -6,12 +6,12 @@ Smart Bus Information System with Arduino &amp; Web
 - Challenge Point : 공공버스 API 사용, TFT 사용, NFC태그 사용, 버튼 사용, 웹 개발
 
 ## 주요 기능
-- Arduino : 공공버스 API 통한 도착정보 안내
-- Arduino : NFC태그 이용한 환승태그
-- Arduino : 오프라인 승차 벨
-- Web : 온라인 승차 벨
-- Web : 버스회사 정보 확인
-- Web : 통합 게시판(칭찬, 건의, 자유)
+- API 통한 도착정보 안내(Arduino)
+- NFC태그 이용한 환승태그(Arduino)
+- 오프라인 승차 벨(Arduino)
+- 온라인 승차 벨(Web)
+- 버스회사 정보 확인(Web)
+- 통합 게시판(칭찬, 건의, 자유)(Web)
 
 ## 개발환경
 - 사용언어 : Java 1.8 / HTML / CSS / Javascript / C++(Arduino)
