@@ -44,6 +44,7 @@ Smart Bus Information System with Arduino &amp; Web
 ![10](https://user-images.githubusercontent.com/99253941/158059474-17c4d70b-b4e9-4065-8ab8-68bd442d0d57.jpg)
 
 ## 사용 부품
+[주문리스트_(자바죠).xlsx](https://github.com/2022-SMHRD-KDT-IoT-1/ZAVA_ZOW_web/files/8240878/_.xlsx)
 - 도심형 BIS
 ![15](https://user-images.githubusercontent.com/99253941/158060519-86c68255-f87b-4db2-918e-5570ed0fe637.jpg)
 
@@ -61,7 +62,6 @@ Smart Bus Information System with Arduino &amp; Web
 ![18](https://user-images.githubusercontent.com/99253941/158065109-fa70faa6-1417-4fda-934f-36a8769ab680.jpg)
 
 ## 활용 사진 예시
-[주문리스트_(자바죠).xlsx](https://github.com/2022-SMHRD-KDT-IoT-1/ZAVA_ZOW_web/files/8240878/_.xlsx)
 - 도심형 BIS
 ![11](https://user-images.githubusercontent.com/99253941/158060104-cf7f4a8b-e20f-4a0b-86e7-75f82694ebc8.jpg)
 
